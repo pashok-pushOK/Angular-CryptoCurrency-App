@@ -12,6 +12,9 @@ const items = require('./routes/items')(router);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// express static folder
+app.use(express.static(__dirname + '/frontend/dist/frontend'));
+
 // cors
 const cors = require('cors');
 const corsOptions = {
@@ -20,7 +23,12 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.get('/home', items);
+// requests
+app.use('/fetchData', items);
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/frontend/dist/frontend/index.html'));
+});
 
 app.listen(port, () => {
     console.log(`App is listening on ${port} port`);

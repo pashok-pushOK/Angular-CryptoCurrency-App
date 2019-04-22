@@ -12,7 +12,7 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'crypto-item',
+        path: 'crypto-item/:id',
         component: CryptoItemPageComponent
     }
 ];

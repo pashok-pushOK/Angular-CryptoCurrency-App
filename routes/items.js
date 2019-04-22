@@ -3,6 +3,7 @@ const rp = require('request-promise');
 const requestOptions = {
     method: 'GET',
     uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
+    // uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=1',
     qs: {
         start: 1,
         limit: 5000,
@@ -17,17 +18,18 @@ const requestOptions = {
 
 let cryptoItemsArr = [];
 
-rp(requestOptions).then(response => {
-    cryptoItemsArr = response;
-}).catch((err) => {
-    console.log('API call error:', err.message);
-});
-
 module.exports = (router) => {
 
-    router.get('/crypto-items', (req, res) => {
-        res.json({success: true, message: 'Test'});
-    })
+    router.get('/cryptoItems', (req, res) => {
+        rp(requestOptions)
+            .then(response => {
+                cryptoItemsArr = response;
+                res.json({success: true, message: 'Fetched data!', data: cryptoItemsArr});
+            })
+            .catch((err) => {
+                res.json({success: false, message: `Error: ${err}`});
+            });
+    });
 
     return router;
 };
