@@ -1,9 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HttpClientModule} from "@angular/common/http";
 
 // routes
 import {AppRoutingModule} from './routes/app-routing/app-routing.module';
 
+// components
 import {AppComponent} from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CryptoItemComponent } from './crypto-item/crypto-item.component';
@@ -22,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
