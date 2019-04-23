@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
+import {CryptoItem} from "../crypto-item";
 
 @Component({
-  selector: 'app-crypto-item',
-  templateUrl: './crypto-item.component.html',
-  styleUrls: ['./crypto-item.component.sass']
+    selector: 'app-crypto-item',
+    templateUrl: './crypto-item.component.html',
+    styleUrls: ['./crypto-item.component.sass']
 })
 export class CryptoItemComponent implements OnInit {
 
-  constructor() { }
+    @Input() listCryptoItem: CryptoItem;
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
 
 }

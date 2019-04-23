@@ -1,3 +1,23 @@
-<p>
-  crypto-item works!
-</p>
+<div class="crypto-item-col">
+    <div class="crypto-item-col--header text-center">
+        <h2>{{listCryptoItem.name}}</h2>
+    </div>
+    <div class="crypto-item-col--body">
+        <h3>Rank: {{listCryptoItem.id}}</h3>
+        <div class="d-flex justify-content-center mb-3">
+            <div class="ml-3 mr-3">
+                <h4 class="text-center">Price</h4>
+                <h6 class="money">{{listCryptoItem.quote.USD.price | currency}}</h6>
+                <h6 class="percentage in-minus">{{listCryptoItem.quote.USD.percent_change_1h}}</h6>
+            </div>
+            <div class="ml-3 mr-3">
+                <h4 class="text-center">Market Cap</h4>
+                <h6 class="money">{{listCryptoItem.quote.USD.market_cap}}</h6>
+                <h6 class="percentage in-plus">+1.28%</h6>
+            </div>
+        </div>
+    </div>
+    <div class="crypto-item-col--footer text-center">
+        <a class="view-item" [routerLink]="'crypto-item/' + listCryptoItem.name">View</a>
+    </div>
+</div>
