@@ -8,12 +8,12 @@
     background-color: #2E4159
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15)
     z-index: 9
+    transition: all .8s ease-in-out
 
     & .header-menu
         width: 100%
         height: 66px
         border-radius: 5px
-        padding: 0 15px
         justify-content: space-between
         align-items: center
         flex-wrap: wrap
@@ -28,3 +28,61 @@
                 color: white
                 font-size: 14px
                 line-height: 18px
+
+.navbar-link
+    margin-right: 30px
+
+    &:last-child
+        margin-right: 0
+
+.dropdown-custom
+    position: relative
+    color: white
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 40px
+
+    & .dropdown-custom--body
+        display: none
+        position: absolute
+        top: 100%
+        right: 0
+        width: 175px
+        padding: 25px
+        background-color: white
+        border-radius: 4px
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15)
+        z-index: 6
+        transition: all .4s ease-in-out
+        transition-delay: .1s
+
+        & .theme-picker--item
+            flex: 0 1 50%
+            margin-bottom: 20px
+
+            & div
+                cursor: pointer
+                width: 45px
+                height: 45px
+                border-radius: 50%
+                margin: 0 auto
+
+            & .dark-1
+                background-color: #262626
+
+            & .green-1
+                background-color: #038C73
+
+            & .danger-1
+                background-color: #F25041
+
+            & .orange-1
+                background-color: #F2955E
+
+            & .blue-1
+                background-color: #5196A6
+
+    &:hover
+        & .dropdown-custom--body
+            display: flex
+            opacity: 1

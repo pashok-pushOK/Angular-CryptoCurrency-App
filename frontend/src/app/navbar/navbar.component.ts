@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.sass']
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.sass']
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+    public theme: string = 'default-theme';
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    public toggleBodyTheme(theme): void {
+
+        document.getElementById('main').classList.remove(this.theme);
+        document.getElementById('main').classList.add(theme);
+        this.theme = theme;
+    }
+
+    ngOnInit() {
+    }
 
 }

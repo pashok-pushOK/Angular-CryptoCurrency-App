@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900')
 
+body, html
+    height: 100%
+
 body
     padding-top: 90px
     font-family: 'Rubik', sans-serif
@@ -29,6 +32,15 @@ button
     outline: none
     font-size: 14px
 
+.content
+    min-height: calc(100% - 51px)
+
+.main-no-results
+    font-size: 18px
+    text-transform: uppercase
+    font-weight: 600
+    padding-top: 40px
+
 .button-outline-white
     border: 2px solid #fff
     border-radius: 4px
@@ -55,6 +67,9 @@ body.dark-theme
             & .money
                 color: #262626 !important
 
+    & .footer
+        background-color: #262626
+
 body.green-theme
     & .header
         background-color: #038C73
@@ -67,6 +82,9 @@ body.green-theme
                 background-color: #038C73 !important
             & .money
                 color: #038C73 !important
+
+    & .footer
+        background-color: #038C73
 
 body.danger-theme
     & .header
@@ -81,6 +99,9 @@ body.danger-theme
             & .money
                 color: #F25041 !important
 
+    & .footer
+        background-color: #F25041
+
 body.orange-theme
     & .header
         background-color: #F2955E
@@ -94,6 +115,9 @@ body.orange-theme
             & .money
                 color: #F2955E !important
 
+    & .footer
+        background-color: #F2955E
+
 body.blue-theme
     & .header
         background-color: #5196A6
@@ -106,3 +130,6 @@ body.blue-theme
                 background-color: #5196A6 !important
             & .money
                 color: #5196A6 !important
+
+    & .footer
+        background-color: #5196A6

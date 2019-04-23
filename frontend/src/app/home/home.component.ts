@@ -10,15 +10,23 @@ import {CryptoItemsService} from "../service/crypto-items.service";
 export class HomeComponent implements OnInit {
 
     public items: any = [];
+    public isFetchedData: boolean = false;
 
     constructor(
         private cryptoItemsService: CryptoItemsService
     ) {
     }
 
-    fetchData(): void {
-        this.items = this.cryptoItemsService.getCryptoData();
-        console.log(this.items);
+    public onFetchedData(data): void {
+        this.isFetchedData = true;
+        this.items = data.data.data;
+    }
+
+    public fetchData(): void {
+        this.cryptoItemsService.getCryptoData()
+            .subscribe(res => {
+                this.onFetchedData(res);
+            });
     }
 
     ngOnInit() {
