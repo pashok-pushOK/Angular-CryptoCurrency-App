@@ -12,7 +12,34 @@
             </div>
 
             <div class="header-menu--info">
-                <button type="button" class="button button-outline-white" data-modal-target="modal-about">What is this ?</button>
+                <ul class="d-flex align-items-center">
+                    <li class="navbar-link">
+                        <div class="dropdown-custom">
+                            <span>Change theme</span>
+
+                            <div class="dropdown-custom--body flex-wrap">
+                                <div class="theme-picker--item">
+                                    <div class="dark-1" (click)="toggleBodyTheme('dark-theme')"></div>
+                                </div>
+                                <div class="theme-picker--item">
+                                    <div class="green-1" (click)="toggleBodyTheme('green-theme')"></div>
+                                </div>
+                                <div class="theme-picker--item">
+                                    <div class="danger-1" (click)="toggleBodyTheme('danger-theme')"></div>
+                                </div>
+                                <div class="theme-picker--item">
+                                    <div class="orange-1" (click)="toggleBodyTheme('orange-theme')"></div>
+                                </div>
+                                <div class="theme-picker--item">
+                                    <div class="blue-1" (click)="toggleBodyTheme('blue-theme')"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar-link">
+                        <button type="button" class="button button-outline-white" data-modal-target="modal-about">What is this ?</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
