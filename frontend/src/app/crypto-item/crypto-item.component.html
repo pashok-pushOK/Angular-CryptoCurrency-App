@@ -3,21 +3,25 @@
         <h2>{{listCryptoItem.name}}</h2>
     </div>
     <div class="crypto-item-col--body">
-        <h3>Rank: {{listCryptoItem.id}}</h3>
+        <h3>Rank: {{itemIndex + 1}}</h3>
         <div class="d-flex justify-content-center mb-3">
             <div class="ml-3 mr-3">
                 <h4 class="text-center">Price</h4>
                 <h6 class="money">{{listCryptoItem.quote.USD.price | currency}}</h6>
-                <h6 class="percentage in-minus">{{listCryptoItem.quote.USD.percent_change_1h}}</h6>
+                <h6 class="percentage in-minus"
+                    [ngClass]="{'in-plus':listCryptoItem.quote.USD.percent_change_1h > listCryptoItem.quote.USD.percent_change_24h}"
+                >
+                    1h: {{listCryptoItem.quote.USD.percent_change_1h | number}} %
+                </h6>
             </div>
             <div class="ml-3 mr-3">
                 <h4 class="text-center">Market Cap</h4>
-                <h6 class="money">{{listCryptoItem.quote.USD.market_cap}}</h6>
-                <h6 class="percentage in-plus">+1.28%</h6>
+                <h6 class="money">{{listCryptoItem.quote.USD.market_cap | currency}}</h6>
+                <h6 class="percentage in-plus">24h: {{listCryptoItem.quote.USD.percent_change_24h | number}} %</h6>
             </div>
         </div>
     </div>
     <div class="crypto-item-col--footer text-center">
-        <a class="view-item" [routerLink]="'crypto-item/' + listCryptoItem.name">View</a>
+        <a class="view-item" [routerLink]="'crypto-item/' + listCryptoItem.name.toLowerCase()">View</a>
     </div>
 </div>

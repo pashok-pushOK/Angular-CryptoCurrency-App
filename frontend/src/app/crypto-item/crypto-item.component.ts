@@ -10,6 +10,7 @@ import {CryptoItem} from "../crypto-item";
 export class CryptoItemComponent implements OnInit {
 
     @Input() listCryptoItem: CryptoItem;
+    @Input() itemIndex: number;
 
     constructor() {
     }

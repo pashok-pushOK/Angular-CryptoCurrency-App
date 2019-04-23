@@ -20,11 +20,6 @@ export class HomeComponent implements OnInit {
     public onFetchedData(data): void {
         this.isFetchedData = true;
         this.items = data.data.data;
-
-        if(this.items.length > 10)
-            this.items.slice(0, 10);
-
-        console.log(this.items.length)
     }
 
     public fetchData(): void {
@@ -36,8 +31,6 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this.fetchData();
-
-        console.log('OnInit', this.items);
     }
 
 }
