@@ -15,7 +15,6 @@ export class CryptoItemComponent implements OnInit {
     constructor() {
     }
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
 }

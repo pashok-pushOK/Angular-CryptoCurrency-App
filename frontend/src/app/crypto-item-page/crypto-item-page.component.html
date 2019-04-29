@@ -1,3 +1,18 @@
-<p>
-  crypto-item-page works!
-</p>
+<div class="container-fluid">
+    <div *ngIf="isLoaded">
+        <div class="row align-items-center">
+            <div class="col-sm-12 offset-md-3 col-md-6">
+                <div class="text-center">
+                    <img [src]="item[routeId].logo" [alt]="item[routeId].name" class="crypto-item-logo">
+                    <h1 class="crypto-item-name text-uppercase mb-4">{{item[routeId].name}}</h1>
+                </div>
+                <div class="mb-5">
+                    <p class="description text-center text-secondary">{{item[routeId].description}}</p>
+                </div>
+                <div class="tags d-flex flex-wrap justify-content-center" *ngIf="item[routeId].tags">
+                    <span class="tags--item" *ngFor="let tag of item[routeId].tags">{{tag}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

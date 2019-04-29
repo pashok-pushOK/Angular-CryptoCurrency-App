@@ -1,27 +1,27 @@
 <div class="crypto-item-col d-flex flex-column h-100">
-    <div class="crypto-item-col--header text-center">
+    <div class="crypto-item-col--header d-flex align-items-center justify-content-between">
         <h2>{{listCryptoItem.name}}</h2>
+        <h3><small>Rank:</small> {{itemIndex + 1}}</h3>
     </div>
     <div class="crypto-item-col--body flex-grow-1">
-        <h3>Rank: {{itemIndex + 1}}</h3>
-        <div class="d-flex justify-content-center mb-3">
-            <div class="ml-3 mr-3">
-                <h4 class="text-center">Price</h4>
-                <h6 class="money">{{listCryptoItem.quote.USD.price | currency}}</h6>
-                <h6 class="percentage in-minus"
-                    [ngClass]="{'in-plus':listCryptoItem.quote.USD.percent_change_1h > listCryptoItem.quote.USD.percent_change_24h}"
-                >
-                    1h: {{listCryptoItem.quote.USD.percent_change_1h | number}} %
-                </h6>
-            </div>
-            <div class="ml-3 mr-3">
-                <h4 class="text-center">Market Cap</h4>
-                <h6 class="money">{{listCryptoItem.quote.USD.market_cap | currency}}</h6>
-                <h6 class="percentage in-plus">24h: {{listCryptoItem.quote.USD.percent_change_24h | number}} %</h6>
-            </div>
+        <div class="d-flex flex-wrap justify-content-between mb-3">
+            <h4>Price: <span class="money">{{listCryptoItem.quote.USD.price | currency}}</span></h4>
+            <h4 class="percentage in-minus"
+                [ngClass]="{'in-plus':listCryptoItem.quote.USD.percent_change_1h > listCryptoItem.quote.USD.percent_change_24h}"
+            >
+                1h: {{listCryptoItem.quote.USD.percent_change_1h | number}} %
+            </h4>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between mb-3">
+            <h4>Market Cap: <span class="money">{{listCryptoItem.quote.USD.market_cap | currency}}</span></h4>
+            <h4 class="percentage in-plus">24h: {{listCryptoItem.quote.USD.percent_change_24h | number}} %</h4>
         </div>
     </div>
-    <div class="crypto-item-col--footer text-center">
-        <a class="view-item" [routerLink]="'crypto-item/' + listCryptoItem.name.toLowerCase()">View</a>
+    <div class="crypto-item-col--footer text-right">
+        <a class="view-item"
+           [routerLink]="'crypto-item/' + listCryptoItem.name.toLowerCase() + '/' + listCryptoItem.symbol + '/' + listCryptoItem.id"
+        >
+            View <i class="fa fa-angle-right"></i>
+        </a>
     </div>
 </div>
