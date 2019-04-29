@@ -1,6 +1,6 @@
 <div class="container-fluid" *ngIf="isFetchedData">
     <div class="row row-crypto-items">
-        <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 mb-5" *ngFor="let listCryptoItem of items; let itemIndex = index">
+        <div class="crypto-items--item" *ngFor="let listCryptoItem of items; let itemIndex = index">
             <app-crypto-item [listCryptoItem]="listCryptoItem" [itemIndex]="itemIndex" class="h-100"></app-crypto-item>
         </div>
     </div>

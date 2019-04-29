@@ -33,6 +33,9 @@ button
     font-size: 14px
 
 .content
+    display: flex
+    flex-direction: column
+    justify-content: center
     min-height: calc(100% - 51px)
 
 .main-no-results
@@ -133,3 +136,38 @@ body.blue-theme
 
     & .footer
         background-color: #5196A6
+
+@media (max-width: 1280px)
+    .row-crypto-items
+
+        & .crypto-items--item
+            flex: 1 0 25%
+            max-width: 25%
+
+@media (max-width: 991px)
+    .row-crypto-items
+
+        & .crypto-items--item
+            flex: 1 0 33.333%
+            max-width: 33.333%
+
+@media (max-width: 767px)
+    .row-crypto-items
+
+        & .crypto-items--item
+            flex: 1 0 50%
+            max-width: 50%
+
+@media (max-width: 567px)
+    .row-crypto-items
+
+        & .crypto-items--item
+            flex: 1 0 100%
+            max-width: 100%
+
+@media (min-width: 1281px)
+    .row-crypto-items
+
+        & .crypto-items--item
+            flex: 1 0 20%
+            max-width: 20%

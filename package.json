@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/pashok-pushOK/Angular-CryptoCurrency-App#readme",
   "dependencies": {
+    "angular-font-awesome": "^3.1.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "font-awesome": "^4.7.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   }
