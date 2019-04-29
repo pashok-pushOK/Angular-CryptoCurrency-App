@@ -25,16 +25,15 @@ export class CryptoItemPageComponent implements OnInit {
         this.routeId = this.route.snapshot.paramMap.get('id');
     }
 
-    public isDataFetched(data, bool): void {
-        this.isLoaded = bool;
+    public isDataFetched(data): void {
         this.item = data;
-        console.log(this.item);
+        this.isLoaded = true;
     }
 
     public fetchItemData(): void {
         this.cryptoItemService.getCryptoItem(this.routeName, this.routeSymbol, this.routeId)
             .subscribe(res => {
-                this.isDataFetched(res.data.data, true);
+                this.isDataFetched(res.data.data);
             });
     }
 

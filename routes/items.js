@@ -17,9 +17,12 @@ const requestOptionsItems = {
 
 const requestOptionsItem = {
     method: 'GET',
-    uri: '',
+    uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/info',
     headers: {
         'X-CMC_PRO_API_KEY': 'fc5c70b5-3bec-4406-971d-bff5904b92d9'
+    },
+    qs: {
+        id: ''
     },
     json: true,
     gzip: true
@@ -43,7 +46,7 @@ module.exports = (router) => {
 
     // get single item by id
     router.get('/cryptoItem/:name/:symbol/:id', (req, res) => {
-        requestOptionsItem.uri = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${req.params.id}`;
+        requestOptionsItem.qs.id = `${req.params.id}`;
 
         rp(requestOptionsItem)
             .then(response => {
