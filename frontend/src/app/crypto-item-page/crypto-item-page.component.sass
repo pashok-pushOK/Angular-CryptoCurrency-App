@@ -1,6 +1,13 @@
 .crypto-item-logo
     display: block
     margin: 0 auto 30px
+    animation: circleRotate 30s forwards infinite
+
+@keyframes circleRotate
+    from
+        transform: rotate3d(0, 0, 0, 0deg)
+    to
+        transform: rotate3d(0, 1, 0, 360deg)
 
 .crypto-item-name
     color: #2E4159
@@ -17,3 +24,8 @@
     font-weight: 400
     margin-right: 3px
     margin-left: 3px
+
+.route-back
+    font-size: 50px
+    color: #2E4159
+    cursor: pointer

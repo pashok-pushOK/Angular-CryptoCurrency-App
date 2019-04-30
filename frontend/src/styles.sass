@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900')
+@import "~@angular/material/prebuilt-themes/purple-green.css"
 
 body, html
     height: 100%
@@ -60,13 +61,16 @@ button
 body.dark-theme
     & .header
         background-color: #262626
+
     & .crypto-item-col
         &--header
             & h2
                 color: #262626 !important
+
         &--body
             & h3
                 background-color: #262626 !important
+
             & .money
                 color: #262626 !important
 
@@ -76,13 +80,16 @@ body.dark-theme
 body.green-theme
     & .header
         background-color: #038C73
+
     & .crypto-item-col
         &--header
             & h2
                 color: #038C73 !important
+
         &--body
             & h3
                 background-color: #038C73 !important
+
             & .money
                 color: #038C73 !important
 
@@ -92,13 +99,16 @@ body.green-theme
 body.danger-theme
     & .header
         background-color: #F25041
+
     & .crypto-item-col
         &--header
             & h2
                 color: #F25041 !important
+
         &--body
             & h3
                 background-color: #F25041 !important
+
             & .money
                 color: #F25041 !important
 
@@ -108,13 +118,16 @@ body.danger-theme
 body.orange-theme
     & .header
         background-color: #F2955E
+
     & .crypto-item-col
         &--header
             & h2
                 color: #F2955E !important
+
         &--body
             & h3
                 background-color: #F2955E !important
+
             & .money
                 color: #F2955E !important
 
@@ -124,13 +137,16 @@ body.orange-theme
 body.blue-theme
     & .header
         background-color: #5196A6
+
     & .crypto-item-col
         &--header
             & h2
                 color: #5196A6 !important
+
         &--body
             & h3
                 background-color: #5196A6 !important
+
             & .money
                 color: #5196A6 !important
 
@@ -140,34 +156,301 @@ body.blue-theme
 @media (max-width: 1280px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 25%
             max-width: 25%
 
 @media (max-width: 991px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 33.333%
             max-width: 33.333%
 
 @media (max-width: 767px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 50%
             max-width: 50%
 
 @media (max-width: 567px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 100%
             max-width: 100%
 
 @media (min-width: 1281px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 20%
             max-width: 20%
+
+.holder
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    background-color: #2D2F48
+    z-index: 3
+    transition: all 1s ease-in-out
+
+    &.loading-over
+        opacity: 0
+
+.preloader
+    width: 100px
+    height: 100px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    animation: rotatePreloader 2s infinite ease-in
+
+@keyframes rotatePreloader
+    0%
+        transform: translateX(-50%) translateY(-50%) rotateZ(0deg)
+    100%
+        transform: translateX(-50%) translateY(-50%) rotateZ(-360deg)
+
+.preloader div
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: 0
+
+.preloader div:before
+    content: ""
+    position: absolute
+    left: 50%
+    top: 0
+    width: 10%
+    height: 10%
+    background-color: #ffffff
+    transform: translateX(-50%)
+    border-radius: 50%
+
+.preloader div:nth-child(1)
+    transform: rotateZ(0deg)
+    animation: rotateCircle1 2s infinite linear
+    z-index: 9
+
+@keyframes rotateCircle1
+    0%
+        opacity: 0
+    0%
+        opacity: 1
+        transform: rotateZ(36deg)
+    7%
+        transform: rotateZ(0deg)
+    57%
+        transform: rotateZ(0deg)
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+.preloader div:nth-child(2)
+    transform: rotateZ(36deg)
+    animation: rotateCircle2 2s infinite linear
+    z-index: 8
+
+@keyframes rotateCircle2
+    5%
+        opacity: 0
+    5.0001%
+        opacity: 1
+        transform: rotateZ(0deg)
+    12%
+        transform: rotateZ(-36deg)
+    62%
+        transform: rotateZ(-36deg)
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+.preloader div:nth-child(3)
+    transform: rotateZ(72deg)
+    animation: rotateCircle3 2s infinite linear
+    z-index: 7
+
+@keyframes rotateCircle3
+    10%
+        opacity: 0
+    10.0002%
+        opacity: 1
+        transform: rotateZ(-36deg)
+    17%
+        transform: rotateZ(-72deg)
+    67%
+        transform: rotateZ(-72deg)
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+.preloader div:nth-child(4)
+    transform: rotateZ(108deg)
+    animation: rotateCircle4 2s infinite linear
+    z-index: 6
+
+@keyframes rotateCircle4
+    15%
+        opacity: 0
+    15.0003%
+        opacity: 1
+        transform: rotateZ(-72deg)
+    22%
+        transform: rotateZ(-108deg)
+    72%
+        transform: rotateZ(-108deg)
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+.preloader div:nth-child(5)
+    transform: rotateZ(144deg)
+    animation: rotateCircle5 2s infinite linear
+    z-index: 5
+
+@keyframes rotateCircle5
+    20%
+        opacity: 0
+
+    20.0004%
+        opacity: 1
+        transform: rotateZ(-108deg)
+
+    27%
+        transform: rotateZ(-144deg)
+
+    77%
+        transform: rotateZ(-144deg)
+
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+
+.preloader div
+    &:nth-child(6)
+        transform: rotateZ(180deg)
+        animation: rotateCircle6 2s infinite linear
+        z-index: 4
+
+    &:nth-child(7)
+        transform: rotateZ(216deg)
+        animation: rotateCircle7 2s infinite linear
+        z-index: 3
+
+    &:nth-child(8)
+        transform: rotateZ(252deg)
+        animation: rotateCircle8 2s infinite linear
+        z-index: 2
+
+    &:nth-child(9)
+        transform: rotateZ(288deg)
+        animation: rotateCircle9 2s infinite linear
+        z-index: 1
+
+    &:nth-child(10)
+        transform: rotateZ(324deg)
+        animation: rotateCircle10 2s infinite linear
+        z-index: 0
+
+@keyframes rotateCircle6
+    25%
+        opacity: 0
+
+    25.0005%
+        opacity: 1
+        transform: rotateZ(-144deg)
+
+    32%
+        transform: rotateZ(-180deg)
+
+    82%
+        transform: rotateZ(-180deg)
+
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+
+@keyframes rotateCircle7
+    30%
+        opacity: 0
+
+    30.0006%
+        opacity: 1
+        transform: rotateZ(-180deg)
+
+    37%
+        transform: rotateZ(-216deg)
+
+    87%
+        transform: rotateZ(-216deg)
+
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+
+@keyframes rotateCircle8
+    35%
+        opacity: 0
+
+    35.0007%
+        opacity: 1
+        transform: rotateZ(-216deg)
+
+    42%
+        transform: rotateZ(-252deg)
+
+    92%
+        transform: rotateZ(-252deg)
+
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+
+@keyframes rotateCircle9
+    40%
+        opacity: 0
+
+    40.0008%
+        opacity: 1
+        transform: rotateZ(-252deg)
+
+    47%
+        transform: rotateZ(-288deg)
+
+    97%
+        transform: rotateZ(-288deg)
+
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
+
+
+@keyframes rotateCircle10
+    45%
+        opacity: 0
+
+    45.0009%
+        opacity: 1
+        transform: rotateZ(-288deg)
+
+    52%
+        transform: rotateZ(-324deg)
+
+    102%
+        transform: rotateZ(-324deg)
+
+    100%
+        transform: rotateZ(-324deg)
+        opacity: 1
