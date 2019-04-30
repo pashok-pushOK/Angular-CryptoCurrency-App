@@ -1,6 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
+import {
+    MatTooltipModule
+} from '@angular/material';
 
 // routes
 import {AppRoutingModule} from './routes/app-routing/app-routing.module';
@@ -25,7 +30,9 @@ import { FooterComponent } from './footer/footer.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatTooltipModule
     ],
     providers: [],
     bootstrap: [AppComponent]

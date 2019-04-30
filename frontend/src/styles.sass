@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900')
+@import "~@angular/material/prebuilt-themes/purple-green.css"
 
 body, html
     height: 100%
@@ -140,34 +141,34 @@ body.blue-theme
 @media (max-width: 1280px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 25%
             max-width: 25%
 
 @media (max-width: 991px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 33.333%
             max-width: 33.333%
 
 @media (max-width: 767px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 50%
             max-width: 50%
 
 @media (max-width: 567px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 100%
             max-width: 100%
 
 @media (min-width: 1281px)
     .row-crypto-items
 
-        & .crypto-items--item
+        & .crypto-items--item.grouped
             flex: 1 0 20%
             max-width: 20%

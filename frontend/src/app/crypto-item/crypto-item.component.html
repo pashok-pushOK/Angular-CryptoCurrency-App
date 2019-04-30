@@ -19,6 +19,8 @@
     </div>
     <div class="crypto-item-col--footer text-right">
         <a class="view-item"
+           [matTooltip]="'Read about ' + listCryptoItem.name"
+           matTooltipPosition="above"
            [routerLink]="'crypto-item/' + listCryptoItem.name.toLowerCase() + '/' + listCryptoItem.symbol + '/' + listCryptoItem.id"
         >
             View <i class="fa fa-angle-right"></i>
