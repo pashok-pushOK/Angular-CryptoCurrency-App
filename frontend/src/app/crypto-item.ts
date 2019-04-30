@@ -7,7 +7,8 @@ export class CryptoItem {
         USD: {
             price: '',
             percent_change_1h: '',
-            percent_change_24h: ''
+            percent_change_24h: '',
+            market_cap: ''
         }
     }
 }
