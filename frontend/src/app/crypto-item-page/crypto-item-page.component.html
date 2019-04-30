@@ -3,6 +3,11 @@
         <div class="row align-items-center pt-4 pb-4">
             <div class="col-sm-12 offset-md-3 col-md-6">
                 <div class="text-center">
+                    <div class="mb-4">
+                        <span class="route-back" matTooltip="Go Back" matTooltipPosition="above" (click)="goBack()">
+                            <i class="fa fa-angle-left"></i>
+                        </span>
+                    </div>
                     <img [src]="item[routeId].logo" [alt]="item[routeId].name" class="crypto-item-logo">
                     <h1 class="crypto-item-name text-uppercase mb-4">{{item[routeId].name}}</h1>
                 </div>

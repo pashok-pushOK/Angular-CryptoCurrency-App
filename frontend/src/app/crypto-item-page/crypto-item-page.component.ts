@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 
 import {CryptoItemsService} from "../service/crypto-items.service";
 
@@ -18,7 +18,8 @@ export class CryptoItemPageComponent implements OnInit {
 
     constructor(
         private cryptoItemService: CryptoItemsService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private router: Router
     ) {
         this.routeName = this.route.snapshot.paramMap.get('name');
         this.routeSymbol = this.route.snapshot.paramMap.get('symbol');
@@ -37,6 +38,10 @@ export class CryptoItemPageComponent implements OnInit {
             .subscribe(res => {
                 this.isDataFetched(res.data.data);
             });
+    }
+
+    public goBack(): void {
+        this.router.navigateByUrl('');
     }
 
     ngOnInit() {

@@ -20,9 +20,17 @@ export class HomeComponent implements OnInit {
     public onFetchedData(data): void {
         this.isFetchedData = true;
         this.items = data.data.data;
+
+        document.getElementById('loading').classList.add('loading-over');
+
+        setTimeout(_ => {
+            document.getElementById('loading').style.display = 'none'
+        }, 1500);
     }
 
     public fetchData(): void {
+        this.isFetchedData = false;
+
         this.cryptoItemsService.getCryptoData()
             .subscribe(res => {
                 this.onFetchedData(res);
@@ -31,6 +39,8 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this.fetchData();
+
+        console.log(document.getElementById('loading'));
     }
 
 }
