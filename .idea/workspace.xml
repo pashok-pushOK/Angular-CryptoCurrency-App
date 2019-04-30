@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bc59fda-5422-4963-92ff-2840e580e403" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/items.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="48">
+              <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -30,8 +30,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="384">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/home/home.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -84,8 +96,8 @@
         <option value="$PROJECT_DIR$/frontend/src/app/home/home.component.sass" />
         <option value="$PROJECT_DIR$/frontend/src/styles.sass" />
         <option value="$PROJECT_DIR$/routes/items.js" />
-        <option value="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.sass" />
         <option value="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.sass" />
         <option value="$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.ts" />
       </list>
     </option>
@@ -135,6 +147,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="crypto-item-page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Angular-CryptoCurrency-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Angular-CryptoCurrency-App" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,12 +216,13 @@
       <workItem from="1556277442679" duration="1010000" />
       <workItem from="1556281737788" duration="4179000" />
       <workItem from="1556286870032" duration="2833000" />
-      <workItem from="1556550122976" duration="7203000" />
+      <workItem from="1556550122976" duration="8275000" />
+      <workItem from="1556606850545" duration="1298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60089000" />
+    <option name="totallyTimeSpent" value="62459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
@@ -461,16 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/home/home.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -520,20 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/items.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -551,10 +548,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/crypto-item-page/crypto-item-page.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="384">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>

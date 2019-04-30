@@ -28,6 +28,8 @@ export class CryptoItemPageComponent implements OnInit {
     public isDataFetched(data): void {
         this.item = data;
         this.isLoaded = true;
+
+        console.log(data);
     }
 
     public fetchItemData(): void {
